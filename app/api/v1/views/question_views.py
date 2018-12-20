@@ -34,7 +34,7 @@ def get_question(questionId):
     i = question.get_a_question(questionId)
     if i:
         return jsonify({"Status": "Ok", "Question": i}), 200
-    return jsonify({"Message": "Question not found!", "status": "error"}), 404
+    return jsonify({"Message": "Question not found!", "Status": "error"}), 404
 
 @myquestions.route('/questions/<int:questionId>', methods=['DELETE'])
 def delete_question(questionId):
