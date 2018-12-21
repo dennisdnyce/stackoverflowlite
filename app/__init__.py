@@ -7,9 +7,9 @@ from .api.v1.views.answer_views import myanswers as ansv1
 
 def create_app(config):
     '''function that creates the flask app'''
-    app = Flask(__name__)
+    app = Flask(__name__, instance_relative_config=True)
     app.register_blueprint(qnsv1)
     app.register_blueprint(ansv1)
     #app.register_blueprint(usrv1)
-    app.config.from_object(app_config[config])
+    app.config.from_pyfile('config.py')
     return app
