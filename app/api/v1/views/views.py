@@ -42,3 +42,19 @@ def delete_question(questionId):
         question.All_Questions.remove(k)
         return jsonify({"Message": "Question deleted successfully", "status": "ok"}), 200
     return jsonify({"Message": "Question does not exist!", "status": "error"}), 404
+
+@myapi.route('/questions/<int:questionId>/answers', methods=['POST'])
+def post_answer(questionId):
+    i = question.get_a_question(questionId)
+    if i:
+        data = request.get_json()
+        answerId = len(answer.All_Answers) + 1
+        ansbody = data['ansbody']
+        anstimeposted = answer.anstimeposted
+        answer.post_an_answer(answerId, ansbody, anstimeposted)
+        answer_validator = validate_answer(data)
+
+        if (answer_validator != True):
+            return answer_validator
+        return jsonify({"Message": "Answer posted successfully", "Status": "Ok"}), 201
+    return jsonify({"Message": "Question not found!"}), 404
