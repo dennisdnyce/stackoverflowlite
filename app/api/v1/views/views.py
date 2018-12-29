@@ -23,3 +23,7 @@ def post_question():
     if (question_validator != True):
         return question_validator
     return jsonify({"Message": "You have successfully posted a question", "Question_Post": data}), 201
+
+@myapi.route('/questions', methods=['GET'])
+def get_questions():
+    return jsonify({"All_Questions": question.All_Questions}), 200
