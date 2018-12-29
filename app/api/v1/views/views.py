@@ -59,6 +59,13 @@ def post_answer(questionId):
         return jsonify({"Message": "Answer posted successfully", "Status": "Ok"}), 201
     return jsonify({"Message": "Question not found!"}), 404
 
+@myapi.route('/questions/<int:questionId>/answers', methods=['GET'])
+def get_answers(questionId):
+    for qn in question.All_Questions:
+        if qn['questionId'] == questionId:
+            return jsonify({"Message": answer.All_Answers}), 200
+        return jsonify({"Message": "Question related to answers query not found", "Status": "Error"}), 404
+
 @myapi.route('/questions/<int:questionId>/answers/<int:answerId>', methods=['GET'])
 def get_answer(questionId, answerId):
     for i in question.All_Questions:
