@@ -34,3 +34,11 @@ def get_question(questionId):
     if i:
         return jsonify({"Status": "Ok", "Question": i}), 200
     return jsonify({"Message": "Question not found!", "Status": "error"}), 404
+
+@myapi.route('/questions/<int:questionId>', methods=['DELETE'])
+def delete_question(questionId):
+    k = question.delete_a_question(questionId)
+    if k:
+        question.All_Questions.remove(k)
+        return jsonify({"Message": "Question deleted successfully", "status": "ok"}), 200
+    return jsonify({"Message": "Question does not exist!", "status": "error"}), 404
