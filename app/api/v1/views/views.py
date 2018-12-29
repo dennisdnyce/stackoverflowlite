@@ -27,3 +27,10 @@ def post_question():
 @myapi.route('/questions', methods=['GET'])
 def get_questions():
     return jsonify({"All_Questions": question.All_Questions}), 200
+
+@myapi.route('/questions/<int:questionId>', methods=['GET'])
+def get_question(questionId):
+    i = question.get_a_question(questionId)
+    if i:
+        return jsonify({"Status": "Ok", "Question": i}), 200
+    return jsonify({"Message": "Question not found!", "Status": "error"}), 404
