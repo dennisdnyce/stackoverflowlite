@@ -9,8 +9,8 @@ from app.api.v1.models.models import UserQuestions, AnswerQuestions
 from app.api.v1.views.views import question, answer
 from app.api.v1.utils.validators import validate_question, validate_answer
 
-class TestAnswerQuestions(unittest.TestCase):
-    ''' This class represents the User Questions and user answers test case '''
+class TestUserQuestions(unittest.TestCase):
+    ''' This class represents the User Questions test case '''
     def setUp(self):
         ''' define test variables and initialize the app '''
         self.app = create_app(config='testing')
@@ -38,21 +38,14 @@ class TestAnswerQuestions(unittest.TestCase):
         self.assertIn("Question not found!", response_msg["Message"])
 
     def test_post_answer_to_question(self):
-        ''' tests that a user can post an answer to an existing question '''
+        ''' tests that a user cannot delete a non-existing question '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
         res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(self.answer))
         self.assertEqual(res.status_code, 201)
 
-    def test_blank_answer_to_question(self):
-        ''' tests that a user can post an answer to an existing question '''
-        response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
-        self.assertEqual(response.status_code, 201)
-        res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(dict(ansbody="")))
-        self.assertEqual(res.status_code, 401)
-
     def test_get_single_answer_to_single_question(self):
-        ''' tests that a user can get a single answer to a single question '''
+        ''' tests that a user cannot delete a non-existing question '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
         res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(self.answer))
@@ -61,7 +54,7 @@ class TestAnswerQuestions(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
 
     def test_non_existing_answer_to_single_question(self):
-        ''' tests that a user cannot get a non-existing answer to an existing question '''
+        ''' tests that a user cannot delete a non-existing question '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
         res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(self.answer))
@@ -70,7 +63,7 @@ class TestAnswerQuestions(unittest.TestCase):
         self.assertEqual(resp.status_code, 404)
 
     def test_non_existing_question_to_single_answer(self):
-        ''' tests that a user cannot get an answer to a non-existing question '''
+        ''' tests that a user cannot delete a non-existing question '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
         res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(self.answer))
@@ -79,7 +72,7 @@ class TestAnswerQuestions(unittest.TestCase):
         self.assertEqual(resp.status_code, 404)
 
     def test_get_all_answers_to_single_question(self):
-        ''' tests that a user can get all the answers posted for a single question '''
+        ''' tests that a user cannot delete a non-existing question '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
         res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(self.answer))
@@ -88,7 +81,7 @@ class TestAnswerQuestions(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
 
     def test_get_all_answers_to_non_existing_question(self):
-        ''' tests that a user cannot get multiple answers to non-existing question '''
+        ''' tests that a user cannot delete a non-existing question '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
         res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(self.answer))
