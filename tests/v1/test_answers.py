@@ -93,7 +93,7 @@ class TestAnswerQuestions(unittest.TestCase):
         self.assertEqual(response.status_code, 201)
         res = self.client.post("api/v1/questions/1/answers", content_type='application/json', data=json.dumps(self.answer))
         self.assertEqual(res.status_code, 201)
-        resp = self.client.get("api/v1/questions/3/answers", content_type='application/json')
+        resp = self.client.get("api/v1/questions/35/answers", content_type='application/json')
         self.assertEqual(resp.status_code, 404)
 
 ''' make tests conveniently executable '''
