@@ -1,34 +1,6 @@
 from datetime import datetime
 
-class UserRegistration():
-    ''' class model for the user registration '''
-    def __init__(self, username, email, password, confirm):
-        self.username = username
-        self.email = email
-        self.password = password
-        self.confirm = confirm
-        self.usrtimeposted = datetime.now()
-        self.All_Users = []
-
-    def post_a_user(self, userId, username, email, password, confirm, usrtimeposted):
-        my_user = {
-            "userId": userId,
-            "username": username,
-            "email": email,
-            "password": password,
-            "confirm": confirm,
-            "usrtimeposted": usrtimeposted
-        }
-
-        self.All_Users.append(my_user)
-
-    def get_a_user(self, userId):
-        for usr in self.All_Users:
-            if usr['userId'] == userId:
-                return usr
-
 class UserQuestions():
-    ''' class model for the user questions '''
     def __init__(self, qntitle, qntags, qnbody):
         self.qntitle = qntitle
         self.qntags = qntags
@@ -58,7 +30,6 @@ class UserQuestions():
                 return k
 
 class AnswerQuestions():
-    ''' class model for the user answers to questions '''
     def __init__(self, ansbody):
         self.ansbody = ansbody
         self.anstimeposted = datetime.now()
