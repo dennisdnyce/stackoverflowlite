@@ -66,10 +66,10 @@ class TestUserQuestions(unittest.TestCase):
         ''' tests that a user should be able to delete his/her posted questions '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
-        res = self.client.delete("/api/v1/questions/1", content_type='application/json')
+        res = self.client.delete("api/v1/questions/1", content_type='application/json')
         self.assertEqual(res.status_code, 200)
         # Test to see if it exists, should return a 404
-        result = self.client.get("/api/v1/questions/1")
+        result = self.client.get("api/v1/questions/1")
         self.assertEqual(result.status_code, 404)
 
     def test_delete_non_existing_question(self):
@@ -83,14 +83,14 @@ class TestUserQuestions(unittest.TestCase):
         ''' tests that a user should be able to get a single posted questions '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
-        res = self.client.get("/api/v1/questions/1", content_type='application/json')
+        res = self.client.get("api/v1/questions/1", content_type='application/json')
         self.assertEqual(res.status_code, 200)
 
     def test_get_non_existing_question(self):
         ''' tests that a user should not be able to find a non-existing question '''
         response = self.client.post("/api/v1/questions", content_type='application/json', data=json.dumps(self.question))
         self.assertEqual(response.status_code, 201)
-        res = self.client.get("/api/v1/questions/3", content_type='application/json')
+        res = self.client.get("api/v1/questions/3", content_type='application/json')
         self.assertEqual(res.status_code, 404)
 
 
