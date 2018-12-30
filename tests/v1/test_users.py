@@ -130,7 +130,7 @@ class TestUserRegistration(unittest.TestCase):
 
     def test_get_a_non_registered_user(self):
         ''' tests that a registered user can query another registered user '''
-        response = self.client.post("/api/v1/auth/signup", content_type='application/json', data=json.dumps(dict(username="dnyce",
+        response = self.client.post("/api/v1/auth/signup", content_type='application/json', data=json.dumps(dict(username="ddnyce",
         email="jumaspay@gmail.com", password="thisispass", confirm="thisispass")))
         response = self.client.get("/api/v1/users/10", data=json.dumps(dict(userId=1)), content_type='application/json')
         self.assertEqual(response.status_code, 404)
