@@ -6,6 +6,16 @@ StackOverflow-Lite is a mock platform of the main site http://stackoverflow.com 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Watch out for the deployment notes on how to deploy the project on a live system.
 
+### Implemented Endpoints
+- [POST /auth/signup]
+- [POST /questions]
+- [GET /questions]
+- [GET /questions/< int:questionId >]
+- [DELETE /questions/< int:questionId >]
+- [POST /questions/< int:questionId >/answers]
+- [GET /questions/< int:questionId >/answers]
+- [GET /questions/< int:questionId >/answers/< int:answerId >]
+
 ### Prerequisites
 The things you need to setup the project and its relevant configuration.
 ```
