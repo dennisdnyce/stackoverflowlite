@@ -53,4 +53,4 @@ cd stackoverflowlite
 
 * Andela-Nairobi Cycle-36 Cohorts
 * Hat tip to anyone whose code was referenced
-* Endless Motivation from friends and family 
+* Endless Motivation from family and friends 
