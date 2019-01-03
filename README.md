@@ -22,17 +22,24 @@ The things you need to setup the project and its relevant configuration.
 ```
 1. Python3
 2. Flask Microframework
-3. Postman
+3. Postman for testing the API endpoints
 
 ```
 ### Installation
 
 ```
-- Firstly, visit the link > https://dennisdnyce.github.io/stackoverflowlite/UI to preview the design of the project's user interface as projected on github-pages(gh-pages)
-
+- Firstly, visit the link > <a href="https://dennisdnyce.github.io/stackoverflowlite/UI" target="_blank"> https://dennisdnyce.github.io/stackoverflowlite/UI </a> to preview the design of the project's user interface as projected on github-pages(gh-pages)
 - git clone http://github.com/dennisdnyce/stackoverflowlite.git
-
 - cd stackoverflowlite
+- install dependencies :~$ sudo apt install python-pip
+- install virtualenv :~$ sudo pip install virtualenv
+- create a virtual environment :~$ virtualenv myvenv
+- activate the virtual environment :~$ source myvenv/bin/activate
+- install project dependencies :~$(myenv) pip install -r requirements.txt
+- set up the project running environment :~$(myenv)export FLASK_ENV = development
+                                         :~$(myenv)export FLASK_DEBUG = 1
+                                         :~$(myenv)export FLASK_APP = run.py
+- run the project :~$(myenv)flask run                                          
 ```
 ## Contributing
 > To get Started...
