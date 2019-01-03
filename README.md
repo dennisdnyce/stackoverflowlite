@@ -1,10 +1,15 @@
 [![Build Status](https://travis-ci.org/dennisdnyce/stackoverflowlite.svg?branch=develop)](https://travis-ci.org/dennisdnyce/stackoverflowlite)[![Coverage Status](https://coveralls.io/repos/github/dennisdnyce/stackoverflowlite/badge.svg?branch=develop&kill_cache=1)](https://coveralls.io/github/dennisdnyce/stackoverflowlite?branch=develop)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 # StackOverflow-Lite-API
-StackOverflow-Lite is a mock platform of the main site http://stackoverflow.com where any user is allowed to register for an account and ask questions or provide answers to the relevant topics based on his/her knowledge base.
+StackOverflow-Lite is a mock platform of the main site <a href="http://stackoverflow.com" target="_blank">http://stackoverflow.com</a>where any user is allowed to register for an account and ask questions or provide answers to the relevant topics based on his/her knowledge base.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Watch out for the deployment notes on how to deploy the project on a live system.
+
+### NOTE
+- The project is managed by the PivotalTracker software management platform <a href="https://www.pivotaltracker.com/n/projects/2231122" target="_blank">follow link to preview</a>
+- The project documentation is not yet created
+- The app is not yet hosted on heroku
 
 ### Implemented Endpoints
 - [POST /auth/signup]
