@@ -41,6 +41,32 @@ The things you need to setup the project and its relevant configuration.
                                          :~$(myenv)export FLASK_APP = run.py
 - run the project :~$(myenv)flask run                                          
 ```
+## Running Tests
+```
+- pytest :~$(myenv)py.test --cov app/ tests/
+
+- checking test coverage :~$(myenv)coverage report -m 
+```
+## Testing on Postman
+### User Endpoints
+```
+- Register a user [POST /auth/signup] use the url 127.0.0.1:5000/api/v1/auth/signup
+
+```
+### Question Endpoints
+```
+- Post Questions [POST /questions] use the url 127.0.0.1:5000/api/v1/auth/signup
+- Get posted questions [GET /questions] use the url 127.0.0.1:5000/api/v1/questions
+- Get specific posted question [GET /questions/< int:questionId >] use the url 127.0.0.1:5000/api/v1/questions/questionId
+- Delete user posted question [DELETE /questions/< int:questionId >] use the url 127.0.0.1:5000/api/v1/questions/questionId
+```
+### Answer Endpoints
+```
+- Post answers to a question [POST /questions/< int:questionId >/answers] use the url 127.0.0.1:5000/api/v1/questions/questionId/answers
+- Get posted answers to a question [GET /questions/< int:questionId >/answers] use the url 127.0.0.1:5000/api/v1/questions/questionId/answers
+- Get single answer to a single question [GET /questions/< int:questionId >/answers/< int:answerId >] use the url 127.0.0.1:5000/api/v1/questions/questionId/answers/answerId
+```
+
 ## Contributing
 > To get Started...
 
@@ -68,3 +94,6 @@ The things you need to setup the project and its relevant configuration.
 * Andela-Nairobi Cycle-36 Cohorts
 * Hat tip to anyone whose code was referenced
 * Endless Motivation from family and friends 
+
+## Licence
+The stackoverflowlite project is licenced under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a> licence
