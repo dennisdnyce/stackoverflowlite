@@ -50,21 +50,21 @@ The things you need to setup the project and its relevant configuration.
 ## Testing on Postman
 ### User Endpoints
 ```
-- Register a user [POST /auth/signup] use the url 127.0.0.1:5000/api/v1/auth/signup
+-To Register a user [POST /auth/signup] use the url 127.0.0.1:5000/api/v1/auth/signup
 
 ```
 ### Question Endpoints
 ```
-- Post Questions [POST /questions] use the url 127.0.0.1:5000/api/v1/auth/signup
-- Get posted questions [GET /questions] use the url 127.0.0.1:5000/api/v1/questions
-- Get specific posted question [GET /questions/< int:questionId >] use the url 127.0.0.1:5000/api/v1/questions/questionId
-- Delete user posted question [DELETE /questions/< int:questionId >] use the url 127.0.0.1:5000/api/v1/questions/questionId
+-To Post Questions *[POST /questions]* use the url 127.0.0.1:5000/api/v1/auth/signup
+-To Get posted questions *[GET /questions]* use the url 127.0.0.1:5000/api/v1/questions
+-To Get specific posted question *[GET /questions/< int:questionId >]* use the url 127.0.0.1:5000/api/v1/questions/questionId
+-To Delete user posted question *[DELETE /questions/< int:questionId >]* use the url 127.0.0.1:5000/api/v1/questions/questionId
 ```
 ### Answer Endpoints
 ```
-- Post answers to a question [POST /questions/< int:questionId >/answers] use the url 127.0.0.1:5000/api/v1/questions/questionId/answers
-- Get posted answers to a question [GET /questions/< int:questionId >/answers] use the url 127.0.0.1:5000/api/v1/questions/questionId/answers
-- Get single answer to a single question [GET /questions/< int:questionId >/answers/< int:answerId >] use the url 127.0.0.1:5000/api/v1/questions/questionId/answers/answerId
+-To Post answers to a question *[POST /questions/< int:questionId >/answers]* use the url 127.0.0.1:5000/api/v1/questions/questionId/answers
+-To Get posted answers to a question *[GET /questions/< int:questionId >/answers]* use the url 127.0.0.1:5000/api/v1/questions/questionId/answers
+-To Get single answer to a single question *[GET /questions/< int:questionId >/answers/< int:answerId >]* use the url 127.0.0.1:5000/api/v1/questions/questionId/answers/answerId
 ```
 
 ## Contributing
