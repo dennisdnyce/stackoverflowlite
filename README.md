@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 The things you need to setup the project and its relevant configuration.
 ```
-Firstly, visit the link > https://dennisdnyce.github.io/stackoverflowlite/UI to preview the design of the project's user interface as projected on github-pages(gh-pages)
+Firstly, visit the link > <a href="https://dennisdnyce.github.io/stackoverflowlite/UI" target="_blank">https://dennisdnyce.github.io/stackoverflowlite/UI</a> to preview the design of the project's user interface as projected on github-pages(gh-pages)
 ```
 ```
 git clone http://github.com/dennisdnyce/stackoverflowlite.git
@@ -31,7 +31,7 @@ cd UI and access the needed html template on the browser of your choice *preferr
       - 👯 Clone this repo to your local machine using `https://github.com/dennisdnyce/stackoverflowlite.git`
       
 ### Step 2
-- **Hack away with one of your branches or you can use one of my many branches.**
+- **Hack away with one of your branches or you can use one of my branches.**
 
 ### Step 3
 - 🔃 Create a new pull request using <a href="https://github.com/dennisdnyce/stackoverflowlite/compare/" target="_blank">`https://github.com/dennisdnyce/stackoverflowlite/compare/`</a>.
