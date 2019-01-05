@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 The things you need to setup the project and its relevant configuration.
 ```
-Firstly, visit the link > <a href="https://dennisdnyce.github.io/stackoverflowlite/UI" target="_blank">https://dennisdnyce.github.io/stackoverflowlite/UI</a> to preview the design of the project's user interface as projected on github-pages(gh-pages)
+Firstly, visit the link > http://dennisdnyce.github.io/stackoverflowlite/UI to preview the design of the project's user interface as projected on github-pages(gh-pages)
 ```
 ```
 git clone http://github.com/dennisdnyce/stackoverflowlite.git
