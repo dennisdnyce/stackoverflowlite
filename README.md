@@ -41,9 +41,10 @@ The things you need to setup the project and its relevant configuration.
 - create a virtual environment :~$ virtualenv myvenv
 - activate the virtual environment :~$ source myvenv/bin/activate
 - install project dependencies :~$(myenv) pip install -r requirements.txt
-- set up the project running environment :~$(myenv)export FLASK_ENV = development
-                                         :~$(myenv)export FLASK_DEBUG = 1
-                                         :~$(myenv)export FLASK_APP = run.py
+- set up the project running environment 
+                   :~$(myenv)export FLASK_ENV = development
+                   :~$(myenv)export FLASK_DEBUG = 1
+                   :~$(myenv)export FLASK_APP = run.py
 - run the project :~$(myenv)flask run                                          
 ```
 ## Running Tests
