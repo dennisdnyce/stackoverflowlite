@@ -11,6 +11,14 @@ These instructions will get you a copy of the project up and running on your loc
 - The project documentation is not yet created
 - The app is not yet hosted on heroku
 
+Method | Endpoint | Description
+.......|..........|............
+POST   | api/v1/auth/signup | Signs up a user   
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
 ### Implemented Endpoints
 - [POST /auth/signup]
 - [POST /questions]
