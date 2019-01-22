@@ -11,23 +11,15 @@ These instructions will get you a copy of the project up and running on your loc
 - The project documentation is not yet created
 - The app is not yet hosted on heroku
 
-Method | Endpoint | Description
-.......|..........|............
-POST   | api/v1/auth/signup | Signs up a user   
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
 ### Implemented Endpoints
-- [POST /auth/signup]
-- [POST /questions]
-- [GET /questions]
-- [GET /questions/< int:questionId >]
-- [DELETE /questions/< int:questionId >]
-- [POST /questions/< int:questionId >/answers]
-- [GET /questions/< int:questionId >/answers]
-- [GET /questions/< int:questionId >/answers/< int:answerId >]
+| Endpoint       | Prefix     | Description     |
+| :------------- | :----------: | -----------: |
+|  **[POST /auth/signup]** | `/api/v1`   | _Signs up a user_    |
+|**[POST /questions]**   | `/api/v1` | _Posts a question_  |
+| **[GET /questions]**   | `/api/v1` | _Gets all questions_ |
+| **[GET /questions/< int:questionId >]**   | `/api/v1` | _Retrieves a question_ |
+| **[DELETE /questions/< int:questionId >]**   | `/api/v1` | _Deletes a question_ |
+| **[POST /questions/< int:questionId >/answers]**   | `/api/v1` | _Posts an answer to a question_ |
 
 ### Prerequisites
 The things you need to setup the project and its relevant configuration.
